@@ -1,0 +1,278 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"></link>
+        <script src="app.js"   charset="utf-8"></script>
+        <title>Snake Game JS</title>
+        <link rel = "icon" href ="snake.png" type = "image/icon">    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    </head>
+
+    <body>
+<div class="top">
+        <button class="start btn btn-success" style="color:black; font-weight:bold; font-size: 3.5vmin;"> Start / Restart </button> 
+        <div class="score"> Score : <span style="color:green"> 0 </span></div>
+</div>
+<div class="container">
+    <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="popup()">&times;</div>
+                <h1>You Lost ! </h1>
+                <img src="1.gif" height="230" width="400" class="gif">
+                <p></p>
+                <button class="btnTryAgain"> <a href="index.html">Try Again</a></button>
+        </div>
+    </div>
+   <!--  <button onclick="popup()">Show popup</button> -->
+
+        <div class="grid"> 
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div ></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            <div></div> <div></div>
+            
+        </div>
+    </div>
+    </body>
+    <script>
+    function popup(){
+        document.getElementById("popup-1").classList.toggle("active");
+      }
+    </script>
+
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    height: 100vh; width:100vw;
+    background-image: url(2.png);
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover; 
+    background-repeat: no-repeat;
+    position: relative;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.grid{
+    width: 80vmin;
+    height: 80vmin;
+    border: .25vmin black solid;
+    display: grid;
+   grid-template-columns: repeat(20, 1fr);
+}
+
+
+.grid  div{
+    width: 4vmin ;
+    height: 4vmin;
+    /* background-color: blue; */
+}
+
+.snake{
+    background-color: rgb(253, 253, 51);
+    border: .25vmin solid black;
+}
+.apple{
+    background-color: rgb(219, 119, 136);
+    border: .25vmin solid black;
+}
+.score{
+    font-weight: bold;
+    font-size: 5vmin;
+    margin-left: 3%;
+}
+.start{
+    color: #000;
+   margin-left:3%;
+   margin-top: 1%;
+   width:30vmin;
+   height: 8vmin;
+   font-size: 5vmin;
+}
+
+.popup .overlay{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.7);
+    z-index: 1;
+    display:none;
+}
+.popup .content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 100vmin;
+    height: 70vmin;
+    z-index:2;
+    text-align: center;
+    padding:20px;
+    box-sizing:border-box;
+}
+.popup .close-btn{
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:30px;
+    height:30px;
+    background: #75FF71;
+    color:#000;
+    font-size: 25px;
+    font-weight:600;
+    line-height:30px;
+    text-align:center;
+    border-radius:50%;
+    cursor: pointer;
+}
+.popup.active .overlay{
+    display: block;
+}
+.popup.active .content{
+    transition:all 300ms ease-in-out;
+    transform:translate(-50%, -50%) scale(1);
+}
+gif{
+    position: relative;
+    top: -10%;
+}
+.content h1 {
+    font-family: shrikhand;
+    font-size: 70px;
+    letter-spacing: 3px;
+    color: rgba(87, 230, 87, 0.952);
+    margin: 0;
+    -webkit-text-stroke: 2px olivedrab;
+    line-height: 79px;
+}
+.btnTryAgain{
+    width:60vmin;
+    font-size: 40px;
+    margin: 0;
+    /*margin-top:30%;*/
+    font-family: Courgette;
+    color: #000;
+    background-color: #75FF71;
+    border-radius: 20px;
+}
+.content a{
+    text-decoration: none;
+    color: #000;
+}
+.content a:hover{ 
+    text-decoration: none; 
+    color:palevioletred; 
+}
